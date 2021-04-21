@@ -1,0 +1,34 @@
+[
+    {
+        "traceId": "5982fe77008310cc80f1da5e10147519",
+        "parentId": "90394f6bcffb5d13",
+        "id": "67fae42571535f60",
+        "kind": "SERVER",
+        "name": "/m/n/2.6.1",
+        "timestamp": 1516781775726000,
+        "duration": 26000,
+        "localEndpoint": {
+            "serviceName": "api"
+        },
+        "remoteEndpoint": {
+            "serviceName": "apip"
+        },
+        "tags": {
+            "data.http_response_code": "201",
+            "my.name": "Bill Meyer",
+            "client_cluster_name": "apip-int",
+            "country": "US",
+            "email": "bob@splunk.com",
+            "service_asg_name": "api-int-v606",
+            "service_cluster_name": "api-int",
+            "SSN": "123-45-6789",
+            "device_id": "NF-DEV-1",
+            "device_type": "1881",
+            "peer.hostname": "redis.cluster.local",
+            "client_asg_name": "apip-int-v7778",
+            "peer.service": "apip"
+        },
+        "attributes": [
+        ]
+    }
+]

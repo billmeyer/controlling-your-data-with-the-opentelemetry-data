@@ -1,0 +1,30 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+  zipkin:
+
+processors:
+  batch:
+
+  # Add a tag to spans missing it.
+  attributes/newenvironment:
+    actions:
+    - key: environment
+      value: "petclinic"
+      action: insert
+    - key: SSN
+      action: delete
+    - key: email
+      action: hash
+
+exporters:
+  logging:
+    loglevel: debug
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp, zipkin]
+      processors: [batch, attributes/newenvironment]
+      exporters: [logging]
